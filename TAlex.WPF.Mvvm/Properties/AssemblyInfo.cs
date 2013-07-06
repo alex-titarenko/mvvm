@@ -37,5 +37,4 @@ using System.Windows.Markup;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 [assembly: XmlnsDefinition("http://schemas.talex-soft.com/2010/xaml/presentation", "TAlex.WPF.Mvvm.Commands")]
-[assembly: XmlnsDefinition("http://schemas.talex-soft.com/2010/xaml/presentation", "TAlex.WPF.Mvvm.Converters")]
 [assembly: XmlnsPrefix("http://schemas.talex-soft.com/2010/xaml/presentation", "talex")]
