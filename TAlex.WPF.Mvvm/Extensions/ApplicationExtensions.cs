@@ -23,14 +23,21 @@ namespace TAlex.WPF.Mvvm.Extensions
         public static Window GetActiveWindow(this Application application)
         {
             System.Windows.Window activeWindow = null;
-            if (application != null && application.Windows.Count > 0)
+
+            if (application != null)
             {
-                var windowList = new List<Window>(application.Windows.Cast<Window>());
-                activeWindow = windowList.FirstOrDefault(cur => cur.IsActive);
-                if (activeWindow == null && windowList.Count == 1 && windowList[0].Topmost)
+                application.Dispatcher.Invoke(() =>
                 {
-                    activeWindow = windowList[0];
-                }
+                    if (application.Windows.Count > 0)
+                    {
+                        var windowList = new List<Window>(application.Windows.Cast<Window>());
+                        activeWindow = windowList.FirstOrDefault(cur => cur.IsActive);
+                        if (activeWindow == null && windowList.Count == 1 && windowList[0].Topmost)
+                        {
+                            activeWindow = windowList[0];
+                        }
+                    }
+                });
             }
 
             return activeWindow;
