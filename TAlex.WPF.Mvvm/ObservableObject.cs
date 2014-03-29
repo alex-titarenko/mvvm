@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 
@@ -38,7 +39,7 @@ namespace TAlex.WPF.Mvvm
         /// exception is thrown in DEBUG configuration only.</remarks>
         /// <param name="propertyName">The name of the property that
         /// changed.</param>
-        protected virtual void RaisePropertyChanged(string propertyName)
+        protected virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)
         {
             if (PropertyChanged != null)
             {
@@ -70,7 +71,7 @@ namespace TAlex.WPF.Mvvm
         /// exception is thrown in DEBUG configuration only.</remarks>
         /// <param name="propertyName">The name of the property that
         /// changed.</param>
-        protected virtual void RaisePropertyChanging(string propertyName)
+        protected virtual void RaisePropertyChanging([CallerMemberName] string propertyName = null)
         {
             if (PropertyChanging != null)
             {
@@ -126,15 +127,15 @@ namespace TAlex.WPF.Mvvm
         /// </summary>
         /// <typeparam name="T">The type of the property that
         /// changed.</typeparam>
-        /// <param name="propertyName">The name of the property that
-        /// changed.</param>
         /// <param name="field">The field storing the property's value.</param>
         /// <param name="newValue">The property's value after the change
         /// occurred.</param>
+        /// <param name="propertyName">The name of the property that
+        /// changed.</param>
         /// <returns>True if the PropertyChanged event has been raised,
         /// false otherwise. The event is not raised if the old
         /// value is equal to the new value.</returns>
-        protected bool Set<T>(string propertyName, ref T field, T newValue)
+        protected bool Set<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
         {
             if (EqualityComparer<T>.Default.Equals(field, newValue))
             {
