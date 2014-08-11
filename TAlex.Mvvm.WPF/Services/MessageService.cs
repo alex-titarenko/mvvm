@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using TAlex.WPF.Mvvm.Extensions;
+using TAlex.Mvvm.Extensions;
 
 
-namespace TAlex.WPF.Mvvm.Services
+namespace TAlex.Mvvm.Services
 {
     public class MessageService : IMessageService
     {

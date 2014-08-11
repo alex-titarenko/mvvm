@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace TAlex.WPF.Mvvm.Services
+namespace TAlex.Mvvm.Services
 {
     /// <summary>
     /// Available message results.

@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Windows.Input;
 
 
-namespace TAlex.WPF.Mvvm.Commands
+namespace TAlex.Mvvm.Commands
 {
     public class HyperlinkNavigateCommand : ICommand
     {

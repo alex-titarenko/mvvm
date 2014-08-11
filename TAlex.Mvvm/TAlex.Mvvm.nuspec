@@ -6,11 +6,11 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <projectUrl>https://bitbucket.org/t_alex/talex.wpf.mvvm</projectUrl>
+    <projectUrl>https://bitbucket.org/t_alex/talex.mvvm</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>First public release.</releaseNotes>
-    <copyright>Copyright 2013 T-Alex Software</copyright>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014 T-Alex Software</copyright>
     <tags>WPF Mvvm Command</tags>
   </metadata>
 </package>

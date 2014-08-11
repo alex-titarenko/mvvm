@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 
 
-namespace TAlex.WPF.Mvvm.Commands
+namespace TAlex.Mvvm.Commands
 {
     public class RelayCommand : ICommand
     {
@@ -32,11 +32,7 @@ namespace TAlex.WPF.Mvvm.Commands
 
         #region ICommand Members
 
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+        public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
         {
@@ -46,6 +42,15 @@ namespace TAlex.WPF.Mvvm.Commands
         public void Execute(object parameter)
         {
             _execute();
+        }
+
+
+        public virtual void RaiseCanExecuteChanged()
+        {
+            if (CanExecuteChanged != null)
+            {
+                CanExecuteChanged(this, new EventArgs());
+            }
         }
 
         #endregion
@@ -75,11 +80,7 @@ namespace TAlex.WPF.Mvvm.Commands
 
         #region ICommand Members
 
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+        public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
         {
@@ -89,6 +90,15 @@ namespace TAlex.WPF.Mvvm.Commands
         public void Execute(object parameter)
         {
             _execute((T)parameter);
+        }
+
+
+        public virtual void RaiseCanExecuteChanged()
+        {
+            if (CanExecuteChanged != null)
+            {
+                CanExecuteChanged(this, new EventArgs());
+            }
         }
 
         #endregion

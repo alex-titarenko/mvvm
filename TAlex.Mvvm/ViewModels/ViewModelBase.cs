@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace TAlex.WPF.Mvvm
+namespace TAlex.Mvvm.ViewModels
 {
     public class ViewModelBase : ObservableObject
     {

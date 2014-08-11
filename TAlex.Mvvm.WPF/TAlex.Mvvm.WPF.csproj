@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FE19A7AC-894F-4578-9E73-2E0FDE4E1278}</ProjectGuid>
+    <ProjectGuid>{E05AFFD1-7364-41ED-8256-A5CD35E6D615}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TAlex.WPF.Mvvm</RootNamespace>
-    <AssemblyName>TAlex.WPF.Mvvm</AssemblyName>
+    <RootNamespace>TAlex.Mvvm.WPF</RootNamespace>
+    <AssemblyName>TAlex.Mvvm.WPF</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,22 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\HyperlinkNavigateCommand.cs" />
-    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Extensions\ApplicationExtensions.cs" />
-    <Compile Include="ObservableObject.cs" />
-    <Compile Include="Services\IMessageService.cs" />
-    <Compile Include="Services\MessageService.cs" />
-    <Compile Include="ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MessageService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".nuget\NuGet.Config" />
-    <None Include=".nuget\NuGet.targets" />
+    <ProjectReference Include="..\TAlex.Mvvm\TAlex.Mvvm.csproj">
+      <Project>{fe19a7ac-894f-4578-9e73-2e0fde4e1278}</Project>
+      <Name>TAlex.Mvvm</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include=".nuget\NuGet.exe" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
