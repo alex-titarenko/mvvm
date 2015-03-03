@@ -7,11 +7,11 @@ using System.Windows.Markup;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TAlex.Mvvm.WPF")]
-[assembly: AssemblyDescription("TAlex Lightweight MVVM framework")]
+[assembly: AssemblyDescription("Lightweight MVVM framework (WPF Extensions)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("T-Alex Software")]
 [assembly: AssemblyProduct("TAlex.Mvvm.WPF")]
-[assembly: AssemblyCopyright("Copyright © 2014 T-Alex Software")]
+[assembly: AssemblyCopyright("Copyright © 2015 T-Alex Software")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -36,5 +36,5 @@ using System.Windows.Markup;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: XmlnsDefinition("http://schemas.talex-soft.com/2010/xaml/presentation", "TAlex.WPF.Mvvm.Commands")]
+[assembly: XmlnsDefinition("http://schemas.talex-soft.com/2010/xaml/presentation", "TAlex.Mvvm.Commands")]
 [assembly: XmlnsPrefix("http://schemas.talex-soft.com/2010/xaml/presentation", "talex")]

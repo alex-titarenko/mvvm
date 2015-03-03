@@ -28,6 +28,15 @@ namespace TAlex.Mvvm.Commands
             }
         }
 
+
+        public virtual void RaiseCanExecuteChanged()
+        {
+            if (CanExecuteChanged != null)
+            {
+                CanExecuteChanged(this, new EventArgs());
+            }
+        }
+
         #endregion
     }
 }
