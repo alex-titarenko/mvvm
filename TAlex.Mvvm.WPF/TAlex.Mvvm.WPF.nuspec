@@ -6,11 +6,15 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <projectUrl>https://bitbucket.org/t_alex/talex.mvvm</projectUrl>
+    <projectUrl>https://github.com/T-Alex/Mvvm</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright 2014 T-Alex Software</copyright>
-    <tags>WPF Mvvm Command</tags>
+    <copyright>Copyright 2015 T-Alex Software</copyright>
+    <tags>Lightweight MVVM framework WPF</tags>
+
+    <dependencies>
+		<dependency id="TAlex.Mvvm" />
+	</dependencies>
   </metadata>
 </package>
