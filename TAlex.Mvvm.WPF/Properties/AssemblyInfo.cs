@@ -6,11 +6,11 @@ using System.Windows.Markup;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TAlex.Mvvm.WPF")]
+[assembly: AssemblyTitle("TAlex.Mvvm.Wpf")]
 [assembly: AssemblyDescription("Lightweight MVVM framework (WPF Extensions)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("T-Alex Software")]
-[assembly: AssemblyProduct("TAlex.Mvvm.WPF")]
+[assembly: AssemblyProduct("TAlex.Mvvm.Wpf")]
 [assembly: AssemblyCopyright("Copyright © 2015 T-Alex Software")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
