@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAlex.Mvvm", "TAlex.Mvvm\TAlex.Mvvm.csproj", "{FE19A7AC-894F-4578-9E73-2E0FDE4E1278}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAlex.Mvvm.Wpf", "TAlex.Mvvm.Wpf\TAlex.Mvvm.Wpf.csproj", "{E05AFFD1-7364-41ED-8256-A5CD35E6D615}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAlex.Mvvm.Wpf", "TAlex.Mvvm.Wpf2\TAlex.Mvvm.Wpf2.csproj", "{E05AFFD1-7364-41ED-8256-A5CD35E6D615}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0163DCFB-6CA0-4034-874F-3A9AEAE696DB}"
 	ProjectSection(SolutionItems) = preProject
