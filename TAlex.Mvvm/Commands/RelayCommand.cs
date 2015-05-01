@@ -103,4 +103,25 @@ namespace TAlex.Mvvm.Commands
 
         #endregion
     }
+
+    public static class CommandExtensions
+    {
+        public static void RaiseCanExecuteChanged(this ICommand command)
+        {
+            var relayCommand = command as RelayCommand;
+            if (relayCommand != null)
+            {
+                relayCommand.RaiseCanExecuteChanged();
+            }
+        }
+
+        public static void RaiseCanExecuteChanged<T>(this ICommand command)
+        {
+            var relayCommand = command as RelayCommand<T>;
+            if (relayCommand != null)
+            {
+                relayCommand.RaiseCanExecuteChanged();
+            }
+        }
+    }
 }
