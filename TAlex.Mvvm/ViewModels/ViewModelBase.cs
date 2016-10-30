@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 
 namespace TAlex.Mvvm.ViewModels
@@ -49,7 +48,7 @@ namespace TAlex.Mvvm.ViewModels
         /// <returns>True if the PropertyChanged event has been raised,
         /// false otherwise. The event is not raised if the old
         /// value is equal to the new value.</returns>
-        protected bool Set<T>(Expression<Func<T>> propertyExpression, ref T field, T newValue)
+        protected virtual bool Set<T>(Expression<Func<T>> propertyExpression, ref T field, T newValue)
         {
             if (EqualityComparer<T>.Default.Equals(field, newValue))
             {
@@ -75,7 +74,7 @@ namespace TAlex.Mvvm.ViewModels
         /// <returns>True if the PropertyChanged event has been raised,
         /// false otherwise. The event is not raised if the old
         /// value is equal to the new value.</returns>
-        protected bool Set<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
+        protected virtual bool Set<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
         {
             if (EqualityComparer<T>.Default.Equals(field, newValue))
             {
@@ -130,11 +129,7 @@ namespace TAlex.Mvvm.ViewModels
         /// changed.</param>
         protected virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var eventHandler = PropertyChanged;
-            if (eventHandler != null)
-            {
-                eventHandler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         /// <summary>
@@ -149,7 +144,7 @@ namespace TAlex.Mvvm.ViewModels
             var eventHandler = PropertyChanged;
             if (eventHandler != null)
             {
-                string propertyName = GetPropertyName<T>(propertyExpression);
+                string propertyName = GetPropertyName(propertyExpression);
                 eventHandler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
@@ -169,11 +164,7 @@ namespace TAlex.Mvvm.ViewModels
         /// <param name="propertyName">The name of the property that errors changed.</param>
         protected virtual void RaiseErrorsChanged([CallerMemberName] string propertyName = null)
         {
-            var eventHandler = ErrorsChanged;
-            if (eventHandler != null)
-            {
-                eventHandler(this, new DataErrorsChangedEventArgs(propertyName));
-            }
+            ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
         }
 
         /// <summary>
@@ -186,7 +177,7 @@ namespace TAlex.Mvvm.ViewModels
             var eventHandler = ErrorsChanged;
             if (eventHandler != null)
             {
-                string propertyName = GetPropertyName<T>(propertyExpression);
+                string propertyName = GetPropertyName(propertyExpression);
                 eventHandler(this, new DataErrorsChangedEventArgs(propertyName));
             }
         }
