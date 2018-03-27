@@ -1,17 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 14.00
-# Visual Studio 2015
-VisualStudioVersion = 14.0.22823.1
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAlex.Mvvm", "TAlex.Mvvm\TAlex.Mvvm.csproj", "{FE19A7AC-894F-4578-9E73-2E0FDE4E1278}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAlex.Mvvm.Wpf", "TAlex.Mvvm.Wpf\TAlex.Mvvm.Wpf.csproj", "{E05AFFD1-7364-41ED-8256-A5CD35E6D615}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0163DCFB-6CA0-4034-874F-3A9AEAE696DB}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAlex.Mvvm.Tests", "TAlex.Mvvm.Tests\TAlex.Mvvm.Tests.csproj", "{9B83EFC9-67FD-491B-A772-08F92C9B52DB}"
 EndProject
@@ -41,5 +35,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9B83EFC9-67FD-491B-A772-08F92C9B52DB} = {3CF47893-6E00-4CC7-8E56-BB1B5D9BD068}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E396A42-45DA-49AA-853D-7F8DE8C63FEE}
 	EndGlobalSection
 EndGlobal

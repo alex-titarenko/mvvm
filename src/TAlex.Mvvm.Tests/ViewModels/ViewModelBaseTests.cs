@@ -32,7 +32,7 @@ namespace TAlex.Mvvm.Tests.ViewModels
 
             //assert
             Assert.AreEqual(value, Target.IntegerProperty);
-            Assert.AreEqual("IntegerProperty", actualPropName);
+            Assert.AreEqual(nameof(TestViewModel.IntegerProperty), actualPropName);
         }
 
         [Test]
@@ -48,7 +48,7 @@ namespace TAlex.Mvvm.Tests.ViewModels
 
             //assert
             Assert.AreEqual(value, Target.StringProperty);
-            Assert.AreEqual("StringProperty", actualPropName);
+            Assert.AreEqual(nameof(TestViewModel.StringProperty), actualPropName);
         }
 
         [Test]
