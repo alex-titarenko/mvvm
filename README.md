@@ -1,5 +1,5 @@
 # TAlex.Mvvm
-[![Build status](https://ci.appveyor.com/api/projects/status/fs0fugvd4b743sdv?svg=true)](https://ci.appveyor.com/project/alex-titarenko/mvvm)
+![Build](https://github.com/alex-titarenko/mvvm/workflows/Build/badge.svg?branch=master)
 
 Lightweight MVVM framework for C#.
 
