@@ -4,12 +4,12 @@
     <RootNamespace>TAlex.Mvvm</RootNamespace>
     <AssemblyName>TAlex.Mvvm.Wpf</AssemblyName>
     <Product>TAlex.Mvvm.Wpf</Product>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Description>Lightweight MVVM framework (WPF Extensions)</Description>
     <PackageTags>MVVM Framework WPF</PackageTags>
     <Authors>Alex Titarenko</Authors>
-    <PackageProjectUrl>https://github.com/T-Alex/Mvvm</PackageProjectUrl>
-    <Copyright>Copyright 2018 Alex Titarenko</Copyright>
+    <PackageProjectUrl>https://github.com/alex-titarenko/mvvm</PackageProjectUrl>
+    <Copyright>Copyright 2020 Alex Titarenko</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
