@@ -1,5 +1,5 @@
 # TAlex.Mvvm
-![Build](https://github.com/alex-titarenko/mvvm/workflows/Build/badge.svg?branch=master)
+![Build](https://github.com/alex-titarenko/mvvm/workflows/Build/badge.svg?branch=main)
 
 Lightweight MVVM framework for C#.
 
